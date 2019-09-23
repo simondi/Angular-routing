@@ -3,12 +3,10 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { WelcomeComponent } from './home/welcome.component';
 import { PageNotFoundComponent } from './page-not-found.component';
-import { ProductListComponent } from './products/product-list.component';
 
 const routes: Routes = [
   { path: 'welcome', component: WelcomeComponent },
   { path: 'home', redirectTo: 'welcome', pathMatch: 'full' },
-  { path: 'products', component: ProductListComponent },
   { path: '', redirectTo: 'welcome', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent }
 ];
