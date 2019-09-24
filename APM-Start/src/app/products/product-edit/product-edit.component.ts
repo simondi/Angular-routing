@@ -22,6 +22,7 @@ export class ProductEditComponent implements OnInit{
   ) { }
 
   ngOnInit(): void {
+
    // const id = +this.route.snapshot.paramMap.get('id');
     // this.getProduct(id);
     this.route.paramMap.subscribe(
@@ -90,7 +91,7 @@ export class ProductEditComponent implements OnInit{
       this.messageService.addMessage(message);
     }
 
-    this.router.navigate(['/products']);
-    // Navigate back to the product list
+    this.router.navigate(['/products'], { queryParamsHandling: "preserve" });
+    // Navigate back to the product list with preserved / preserve parameter. 
   }
 }
