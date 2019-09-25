@@ -16,14 +16,22 @@ import { UserModule } from './user/user.module';
 import { MessageModule } from './messages/message.module';
 import { AppRoutingModule } from './app-routing.module';
 
+/* Angular material 8 */
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AngularMaterialModule } from './angular-material.module';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+
+
 @NgModule({
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     HttpClientModule,
     InMemoryWebApiModule.forRoot(ProductData, { delay: 1000 }),
     ProductModule,
     UserModule,
     MessageModule,
+    AngularMaterialModule,
     AppRoutingModule
   ],
   declarations: [
@@ -31,6 +39,8 @@ import { AppRoutingModule } from './app-routing.module';
     WelcomeComponent,
     PageNotFoundComponent
   ],
-  bootstrap: [AppComponent]
+  providers: [],
+  bootstrap: [AppComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule { }
