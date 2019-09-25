@@ -69,7 +69,20 @@
         </div>
       </div>
 
-      
+      https://github.com/new-mikha/MatDatepickerEnGb/tree/master/src/app
+      <div class="form-group row">
+        <label class="col-md-2 col-form-label"
+               for="descriptionId">Available Date</label>
+        <div class="col-md-8">
+          <mat-form-field>
+            <input [(ngModel)]="product.releaseDate" matInput [matDatepicker]="availableDatepicker" placeholder="Choose Available Date">
+            <mat-datepicker-toggle matSuffix [for]="availableDatepicker"></mat-datepicker-toggle>
+            <mat-datepicker #availableDatepicker></mat-datepicker>
+          </mat-form-field>
+        </div>
+      </div>
+
+
     </fieldset>
   </form>
 </div>
