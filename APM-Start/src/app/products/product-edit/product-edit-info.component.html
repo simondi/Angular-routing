@@ -69,19 +69,33 @@
         </div>
       </div>
 
-      https://github.com/new-mikha/MatDatepickerEnGb/tree/master/src/app
       <div class="form-group row">
         <label class="col-md-2 col-form-label"
-               for="descriptionId">Available Date</label>
+               for="releaseDateId">Available Date</label>
         <div class="col-md-8">
-          <mat-form-field>
-            <input [(ngModel)]="product.releaseDate" matInput [matDatepicker]="availableDatepicker" placeholder="Choose Available Date">
+          <mat-form-field fxFlexFill>
+            <input matInput [matDatepicker]="availableDatepicker" placeholder="Choose Available Date" [(ngModel)]="product.releaseDate" />
             <mat-datepicker-toggle matSuffix [for]="availableDatepicker"></mat-datepicker-toggle>
-            <mat-datepicker #availableDatepicker></mat-datepicker>
           </mat-form-field>
+          <mat-datepicker #availableDatepicker></mat-datepicker>
+
         </div>
       </div>
 
+      <div class="form-group row">
+        <label class="col-md-2 col-form-label"
+               for="priceId">Price</label>
+        <div class="col-md-8">
+          <textarea class="form-control"
+                    id="priceId"
+                    placeholder="price"
+                    rows=3
+                    [(ngModel)]=product.price
+                    name="price"></textarea>
+        </div>
+      </div>
+
+      <p> The release date is {{product.releaseDate}}</p>
 
     </fieldset>
   </form>

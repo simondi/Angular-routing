@@ -9,10 +9,17 @@ import { ProductEditTagsComponent } from './product-edit/product-edit-tags.compo
 import { SharedModule } from '../shared/shared.module';
 import { ProductRoutingModule } from '../products/product-routing.module';
 
+/* Angular material 8 */
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AngularMaterialModule } from '../angular-material.module';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+
+
 @NgModule({
   imports: [
     SharedModule,
-    ProductRoutingModule
+    ProductRoutingModule,
+    AngularMaterialModule,
   ],
   declarations: [
     ProductListComponent,
