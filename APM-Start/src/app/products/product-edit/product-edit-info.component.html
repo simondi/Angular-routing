@@ -74,7 +74,7 @@
                for="releaseDateId">Available Date</label>
         <div class="col-md-8">
           <mat-form-field fxFlexFill>
-            <input matInput [matDatepicker]="availableDatepicker" placeholder="Choose Available Date" [(ngModel)]="product.releaseDate" />
+            <input matInput [matDatepicker]="availableDatepicker" placeholder="Choose Available Date" [value]="product.releaseDate.value" />
             <mat-datepicker-toggle matSuffix [for]="availableDatepicker"></mat-datepicker-toggle>
           </mat-form-field>
           <mat-datepicker #availableDatepicker></mat-datepicker>
@@ -86,12 +86,12 @@
         <label class="col-md-2 col-form-label"
                for="priceId">Price</label>
         <div class="col-md-8">
-          <textarea class="form-control"
+          <input class="form-control"
                     id="priceId"
                     placeholder="price"
                     rows=3
                     [(ngModel)]=product.price
-                    name="price"></textarea>
+                    name="price"/> 
         </div>
       </div>
 
