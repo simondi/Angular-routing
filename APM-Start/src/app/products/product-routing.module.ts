@@ -8,6 +8,7 @@ import { ProductEditInfoComponent } from './product-edit/product-edit-info.compo
 import { ProductEditTagsComponent } from './product-edit/product-edit-tags.component';
 import { ProductResolver } from './product-resolver.service';
 import { AuthGuard } from './../user/auth.guard';
+import { ProductEditGuard } from './product-edit/product-edit.guard';
 
 
 const routes: Routes = [
@@ -28,7 +29,8 @@ const routes: Routes = [
       },
       {
         path: ':id/edit',
-        component: ProductEditComponent,
+          component: ProductEditComponent,
+          canDeactivate:  [ProductEditGuard],
         resolve: { resolvedData: ProductResolver },
         children: [
           { path: '', redirectTo: 'info', pathMatch: 'full' },
