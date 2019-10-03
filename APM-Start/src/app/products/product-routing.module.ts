@@ -7,18 +7,12 @@ import { ProductEditComponent } from './product-edit/product-edit.component';
 import { ProductEditInfoComponent } from './product-edit/product-edit-info.component';
 import { ProductEditTagsComponent } from './product-edit/product-edit-tags.component';
 import { ProductResolver } from './product-resolver.service';
-import { AuthGuard } from './../user/auth.guard';
+//import { AuthGuard } from './../user/auth.guard';
 import { ProductEditGuard } from './product-edit/product-edit.guard';
 
 
 const routes: Routes = [
   {
-    //Componentless route
-      path: 'products',
-      canActivate: [AuthGuard],
-    // Children routes
-    children: [
-      {
         path: '',
         component: ProductListComponent
       },
@@ -37,9 +31,7 @@ const routes: Routes = [
           { path: 'info', component: ProductEditInfoComponent },
           { path: 'tags', component: ProductEditTagsComponent }
         ]
-      }
-    ]
-  }
+      } 
 ];
 
 @NgModule({
