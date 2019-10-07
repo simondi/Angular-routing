@@ -3,7 +3,8 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { MessageService } from '../../messages/message.service';
 
 import { Product, ProductResolved } from '../product';
-import { ProductService } from '../product.service';
+import { ProductService } from '../../services/product.service';
+import { LoggerService } from './../../services/logger.services';
 
 @Component({
   templateUrl: './product-edit.component.html',
@@ -34,7 +35,8 @@ export class ProductEditComponent implements OnInit{
   constructor(private productService: ProductService,
     private messageService: MessageService,
     private route: ActivatedRoute,
-    private router: Router
+    private router: Router,
+    private loggerService: LoggerService
   ) { }
 
   ngOnInit(): void {
@@ -135,7 +137,8 @@ export class ProductEditComponent implements OnInit{
       }
       this.reset();
     this.router.navigate(['/products'], { queryParamsHandling: "preserve" });
-    // Navigate back to the product list with preserved / preserve parameter. 
+    // Navigate back to the product list with preserved / preserve parameter.
+    this.loggerService.log("Logging a message: "+message);
   }
 
   validate(): void {

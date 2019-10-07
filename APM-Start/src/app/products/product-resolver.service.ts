@@ -5,7 +5,7 @@ import { Observable, of } from 'rxjs';
 import { map, catchError } from 'rxjs/operators';
 
 import { ProductResolved } from './product';
-import { ProductService } from './product.service';
+import { ProductService } from './../services/product.service';
 
 @Injectable({
   providedIn: 'root'

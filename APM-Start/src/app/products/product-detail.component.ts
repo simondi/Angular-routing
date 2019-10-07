@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Product, ProductResolved } from './product';
-import { ProductService } from './product.service';
+import { ProductService } from './../services/product.service';
+import { LoggerService } from './../services/logger.services';
 
 @Component({
   templateUrl: './product-detail.component.html',
@@ -13,7 +14,10 @@ export class ProductDetailComponent implements OnInit {
   errorMessage: string;
 
   constructor(private productService: ProductService,
-    private route: ActivatedRoute) { }
+    private route: ActivatedRoute,
+    private logger: LoggerService) {
+      this.logger.log('Listing Products.');
+  }
 
   ngOnInit(): void {
     //const id = +this.route.snapshot.paramMap.get('id');

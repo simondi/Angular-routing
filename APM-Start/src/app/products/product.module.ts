@@ -19,7 +19,7 @@ import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
   imports: [
     SharedModule,
     ProductRoutingModule,
-    AngularMaterialModule,
+    AngularMaterialModule
   ],
   declarations: [
     ProductListComponent,
