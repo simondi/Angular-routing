@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
-import { MessageService } from '../../messages/message.service';
+import { MessageService } from './../../services/message.service';
 
 import { Product, ProductResolved } from '../product';
 import { ProductService } from '../../services/product.service';

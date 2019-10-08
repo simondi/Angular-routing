@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { Router, Event, NavigationStart, NavigationEnd, NavigationError, NavigationCancel, RouterEvent } from '@angular/router';
 import { AuthService } from './user/auth.service';
 import { slideInAnimation } from './app.animation';
-import { MessageService } from './messages/message.service';
+import { MessageService } from './services/message.service';
 
 @Component({
   selector: 'pm-root',
