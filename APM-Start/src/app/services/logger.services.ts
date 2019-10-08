@@ -10,11 +10,11 @@ export class LoggerService {
 
   log(message: string): void {
     const timeString: String = new Date().toLocaleDateString();
-    console.log(message +   "("+ timeString+")");
+    console.log(message + `(${timeString})`);
   }
 
   error(message: string): void {
-    console.error('error: ${message}');
+    console.error(`error: ${message}`);
   }
 
 }
