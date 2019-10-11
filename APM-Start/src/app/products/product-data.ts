@@ -62,6 +62,17 @@ export class ProductData implements InMemoryDbService {
         starRating: 4.6,
         imageUrl: 'assets/images/xbox-controller.png',
         category: 'Gaming'
+      },
+      {
+        id: 11,
+        productName: 'What Ever Tool',
+        productCode: 'GMG-0022',
+        releaseDate: 'October 15, 2019',
+        description: 'Whatever controller',
+        price: 95.95,
+        starRating: 4.6,
+        imageUrl: 'assets/images/xbox-controller.png',
+        category: 'Gaming'
       }
     ];
     return { products };
